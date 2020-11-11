@@ -1,0 +1,16 @@
+{
+  "name": "googlesearch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:run_ui": "cypress run --env FRONTEND_URL=https://www.google.co.nz,BACKEND_URL=https://www.google.co.nz --spec 'cypress/integration/googlesearch/**/*'",
+    "cypress:run_api": "cypress run --env FRONTEND_URL=https://www.google.co.nz,BACKEND_URL=https://www.google.co.nz --spec 'cypress/integration/api/**/*'",
+    "cypress:open": "cypress open --env FRONTEND_URL=https://www.google.co.nz,BACKEND_URL=https://www.google.co.nz "
+  },
+  "author": "mikey wan",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^5.6.0"
+  }
+}
