@@ -1,3 +1,5 @@
 {
-    "modifyObstructiveCode": false
+    "modifyObstructiveCode": false,
+    "FRONTEND_URL": "https://www.google.co.nz",
+    "BACKEND_URL": "https://www.google.co.nz"
 }
