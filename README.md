@@ -25,13 +25,13 @@ Steps to run this framework:
    
    a. Install docker desktop from https://www.docker.com/products/docker-desktop
    
-   b. Running following command to build and run ui image:
+   b. Running following command to build and run ui image(within folder cypress-ui-api-googlesearch):
       
         $docker build -t cypress-googlesearch-ui -f UiTests.Dockerfile .
       
         $docker run cypress-googlesearch-ui
    
-   c. Running following command to build and run api image:
+   c. Running following command to build and run api image(within folder cypress-ui-api-googlesearch):
       
         $docker build -t cypress-googlesearch-api -f ApiTests.Dockerfile .
       
