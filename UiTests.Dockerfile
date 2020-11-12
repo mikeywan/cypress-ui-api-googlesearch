@@ -5,4 +5,4 @@ RUN chmod -R 755 /src
 WORKDIR /src
 
 # command to run cypress once container is running
-CMD ["/src/start_ui_tests.sh"]
+ENTRYPOINT ["sh", "/src/start_ui_tests.sh"]
