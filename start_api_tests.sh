@@ -1,4 +1,4 @@
-cypress run --env FRONTEND_URL=https://www.google.co.nz,BACKEND_URL=https://www.google.co.nz --spec "cypress/integration/api/**/*" 
+cypress run --env FRONTEND_URL=https://www.google.co.nz,BACKEND_URL=https://www.googleapis.com --spec "cypress/integration/api/**/*" 
 #--parallel \
 #--record \
 #--group API \

@@ -1,5 +1,7 @@
 {
     "modifyObstructiveCode": false,
-    "FRONTEND_URL": "https://www.google.co.nz",
-    "BACKEND_URL": "https://www.google.co.nz"
+    "api-key": "AIzaSyDIRbhttySZmPmgZbtf_iIMzbHfh7f0XGo",
+    "currency-rates-search-engine-id": "93b0a3b2f06070b73",
+    "weather-search-engine-id": "a3bba4ca9538353ac",
+    "map-search-engine-id": "c20a6a7848d55bcaa"
 }

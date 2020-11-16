@@ -1,6 +1,6 @@
 export class GoogleSearchAPIPage {
     api = {
-        NormalSearch: Cypress.env('BACKEND_URL') + '/webhp?#q='
+        NormalSearch: Cypress.env('BACKEND_URL') + '/customsearch/v1?key=' + Cypress.config('api-key') + '&cx='
     }
 
     constructor() {
@@ -9,16 +9,16 @@ export class GoogleSearchAPIPage {
     input_keyword = 'input[name=q]';
 
     requestCurrencyRates(keyword) {
-        cy.request(this.api.NormalSearch + keyword).then((response) => {
+        cy.request(this.api.NormalSearch + Cypress.config('currency-rates-search-engine-id') + '&q=' + keyword).then((response) => {
             expect(response.status).to.eq(200);
             expect(response).to.have.property('headers');
             expect(response).to.have.property('duration');
             this.verifyCurrencyConverterAppearsInTheResponseBody(response.body);
-        });        
+        });
     }
 
     requestWeather(keyword) {
-        cy.request(this.api.NormalSearch + keyword).then((response) => {
+        cy.request(this.api.NormalSearch + Cypress.config('weather-search-engine-id') + '&q=' + keyword).then((response) => {
             expect(response.status).to.eq(200);
             expect(response).to.have.property('headers');
             expect(response).to.have.property('duration');
@@ -27,7 +27,7 @@ export class GoogleSearchAPIPage {
     }
 
     requestMap(keyword) {
-        cy.request(this.api.NormalSearch + keyword).then((response) => {
+        cy.request(this.api.NormalSearch + Cypress.config('map-search-engine-id') + '&q=' + keyword).then((response) => {
             expect(response.status).to.eq(200);
             expect(response).to.have.property('headers');
             expect(response).to.have.property('duration');
@@ -36,14 +36,14 @@ export class GoogleSearchAPIPage {
     }
 
     verifyGoogleMapAppearsInTheResponseBody(responseBody) {
-        // TODO:
+        expect(responseBody.items[0].title).to.include('Google Maps');
     }
 
     verifyCurrencyConverterAppearsInTheResponseBody(responseBody) {
-        // TODO:
+        expect(responseBody.items[0].htmlTitle).to.include('Currency Converter');
     }
 
     verifyMetServiceAppearsInTheResponseBody(responseBody) {
-        // TODO:
+        expect(responseBody.items[0].displayLink).to.include('metservice');
     }
 }

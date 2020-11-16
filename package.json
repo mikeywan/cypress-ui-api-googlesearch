@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cypress:run_ui": "cypress run --env FRONTEND_URL=https://www.google.co.nz,BACKEND_URL=https://www.google.co.nz --spec 'cypress/integration/googlesearch/**/*'",
-    "cypress:run_api": "cypress run --env FRONTEND_URL=https://www.google.co.nz,BACKEND_URL=https://www.google.co.nz --spec 'cypress/integration/api/**/*'",
-    "cypress:open": "cypress open --env FRONTEND_URL=https://www.google.co.nz,BACKEND_URL=https://www.google.co.nz "
+    "cypress:run_ui": "cypress run --env FRONTEND_URL=https://www.google.co.nz,BACKEND_URL=https://www.googleapis.com --spec 'cypress/integration/googlesearch/**/*'",
+    "cypress:run_api": "cypress run --env FRONTEND_URL=https://www.google.co.nz,BACKEND_URL=https://www.googleapis.com --spec 'cypress/integration/api/**/*'",
+    "cypress:open": "cypress open --env FRONTEND_URL=https://www.google.co.nz,BACKEND_URL=https://www.googleapis.com "
   },
   "author": "mikey wan",
   "license": "ISC",
