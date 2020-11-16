@@ -14,13 +14,13 @@ Steps to run this framework:
    $npm install cypress --save-dev
 4. Run ui test
    
-   $./node_modules/cypress/bin/cypress run --env FRONTEND_URL=https://www.google.co.nz,BACKEND_URL=https://www.google.co.nz --spec 'cypress/integration/googlesearch/**/*'
+   $./node_modules/cypress/bin/cypress run --env FRONTEND_URL=https://www.google.co.nz,BACKEND_URL=https://www.googleapis.com --spec 'cypress/integration/googlesearch/**/*'
 5. Run api test
    
-   $./node_modules/cypress/bin/cypress run --env FRONTEND_URL=https://www.google.co.nz,BACKEND_URL=https://www.google.co.nz --spec 'cypress/integration/api/**/*'
+   $./node_modules/cypress/bin/cypress run --env FRONTEND_URL=https://www.google.co.nz,BACKEND_URL=https://www.googleapis.com --spec 'cypress/integration/api/**/*'
 6. Run ui&api test
    
-   $./node_modules/cypress/bin/cypress run --env FRONTEND_URL=https://www.google.co.nz,BACKEND_URL=https://www.google.co.nz
+   $./node_modules/cypress/bin/cypress run --env FRONTEND_URL=https://www.google.co.nz,BACKEND_URL=https://www.googleapis.com
 7. CI support
    
    a. Install docker desktop from https://www.docker.com/products/docker-desktop
