@@ -1,6 +1,8 @@
 export class GoogleSearchAPIPage {
+    api_key = atob(Cypress.config('api-key'));
+
     api = {
-        NormalSearch: Cypress.env('BACKEND_URL') + '/customsearch/v1?key=' + Cypress.config('api-key') + '&cx='
+        NormalSearch: Cypress.env('BACKEND_URL') + '/customsearch/v1?key=' + this.api_key + '&cx='
     }
 
     constructor() {
