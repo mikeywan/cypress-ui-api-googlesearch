@@ -13,7 +13,8 @@ export class GoogleSearchPage {
     }
 
     verifyGoogleMapAppearsInTheFirstNode(){
-        cy.get("div > cite").first().contains("maps.google.co.nz");
+        cy.get("div > cite").first().contains("www.google.co.nz");
+        cy.get("div > cite > span").first().contains("maps");
     }
 
     verifyCurrencyConverterAppearsInTheFirstNode(){
